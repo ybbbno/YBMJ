@@ -1,0 +1,5 @@
+name: YBMJ
+version: '0.1'
+main: me.deadybbb.ybmj.YBMJ
+api-version: '1.21'
+authors: [ Ybbb ]
