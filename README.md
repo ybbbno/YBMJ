@@ -45,7 +45,7 @@ public class CustomConfigHandler extends BasicConfigHandler {
 CustomConfigHandler configHandler = new CustomConfigHandler(plugin);
 configHandler.setDefaultValues(); // Sets default values and saves
 String welcomeMessage = configHandler.getWelcomeMessage(); // Retrieves value
-plugin.getLogger().info("Welcome message: " + welcomeMessage);
+plugin.logger.info("Welcome message: " + welcomeMessage);
 ```
 
 This creates a `custom_config.yml` file in the plugin's data folder with the specified settings, which can be reloaded or saved as needed.
