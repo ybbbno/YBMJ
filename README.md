@@ -5,7 +5,6 @@ YBMJ (Ybbb Basic Module Java) is a plugin for Paper servers. It provides foundat
 ## Features
 
 - **Configuration Management**: Easily create, load, and save YAML configuration files using `BasicConfigHandler`.
-- **Custom Logging**: Utilize `BasicLoggerHandler` for consistent and formatted logging with info, warning, and severe levels.
 - **Text Formatting**: Support for legacy (`&` color codes) and MiniMessage text formatting via `LegacyTextHandler`, with utilities for sending formatted messages, stripping formatting, and formatting locations.
 - **Plugin Framework**: Extend `PluginProvider` instead of `JavaPlugin` to access built-in logging and other utilities.
 
@@ -70,10 +69,10 @@ public class MyPlugin extends PluginProvider {
     }
 }
 ```
-The `PluginProvider` class provides a `logger` instance (`BasicLoggerHandler`) for logging messages with the plugin's name as a prefix.
+The `PluginProvider` class provides a `logger` instance (`BasicLoggerHandler`) for logging messages.
 
 ### Logging with BasicLoggerHandler
-The `BasicLoggerHandler` class provides methods for logging messages at different levels (info, warning, severe), automatically including the plugin's name.
+The `BasicLoggerHandler` class provides methods for logging messages at different levels (info, warning, severe) with simpler access to logger itself.
 
 **Example**:
 ```java
@@ -120,7 +119,7 @@ public void sendWelcomeMessage(Player player) {
 ```java
 String formatted = "&aColored &btext!";
 String plain = LegacyTextHandler.stripFormatting(formatted);
-plugin.getLogger().info("Plain text: " + plain); // Output: Plain text: Colored text!
+plugin.logger.info("Plain text: " + plain); // Output: Plain text: Colored text!
 ```
 
 **Example: Formatting Locations**

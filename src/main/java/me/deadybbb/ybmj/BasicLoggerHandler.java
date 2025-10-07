@@ -1,4 +1,4 @@
-package me.deadybbb.customzones.ybbbbasicmodule;
+package me.deadybbb.ybmj;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,14 +14,14 @@ public class BasicLoggerHandler {
     }
 
     public void info(String msg) {
-        logger.info("[" + name + "] " + msg);
+        logger.info(msg);
     }
 
     public void warning(String msg) {
-        logger.warning("[" + name + "]" + msg);
+        logger.warning(msg);
     }
 
     public void severe(String msg) {
-        logger.severe("[" + name + "] " + msg);
+        logger.severe(msg);
     }
 }

@@ -1,4 +1,4 @@
-package me.deadybbb.customzones.ybbbbasicmodule;
+package me.deadybbb.ybmj;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import java.util.regex.Pattern;
 
 public class LegacyTextHandler {
-    private static final Pattern LEGACY_PATTERN = Pattern.compile("&[0-9a-fk-or]]");
+    private static final Pattern LEGACY_PATTERN = Pattern.compile("&[0-9a-fk-or]");
     private static final MiniMessage MINI_MESSAGE = MiniMessage.miniMessage();
     private static final PlainTextComponentSerializer PLAIN_TEXT_SERIALIZER = PlainTextComponentSerializer.plainText();
     private static final LegacyComponentSerializer LEGACY_TEXT_SERIALIZER = LegacyComponentSerializer.legacyAmpersand();

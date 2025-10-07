@@ -1,4 +1,4 @@
-package me.deadybbb.customzones.ybbbbasicmodule;
+package me.deadybbb.ybmj;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
