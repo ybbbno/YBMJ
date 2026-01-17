@@ -39,6 +39,6 @@ public class LegacyTextHandler {
     }
 
     public static String formatLocation(Location loc) {
-        return String.format("(%.2f, %.2f, %.2f)", loc.getX(), loc.getY(), loc.getZ());
+        return String.format("[%s](%.2f, %.2f, %.2f)", loc.getWorld().getName(), loc.getX(), loc.getY(), loc.getZ());
     }
 }
