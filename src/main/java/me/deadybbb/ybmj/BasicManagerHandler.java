@@ -1,7 +1,7 @@
 package me.deadybbb.ybmj;
 
 public abstract class BasicManagerHandler {
-    protected boolean is_init = false;
+    private boolean is_init = false;
     protected final PluginProvider plugin;
 
     public BasicManagerHandler(PluginProvider plugin) {
@@ -20,7 +20,7 @@ public abstract class BasicManagerHandler {
         is_init = false;
     }
 
-    public boolean is_init_set() {
+    public final synchronized boolean isInit() {
         return is_init;
     }
 

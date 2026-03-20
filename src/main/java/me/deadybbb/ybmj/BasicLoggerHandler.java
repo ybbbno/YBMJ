@@ -1,16 +1,15 @@
 package me.deadybbb.ybmj;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Logger;
 
 public class BasicLoggerHandler {
     private final Logger logger;
-    private final String name;
 
-    public BasicLoggerHandler(JavaPlugin plugin) {
+    public BasicLoggerHandler(@NotNull JavaPlugin plugin) {
         this.logger = plugin.getLogger();
-        this.name = plugin.getName();
     }
 
     public void info(String msg) {

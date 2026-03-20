@@ -8,7 +8,7 @@ import java.io.IOException;
 public class BasicConfigHandler {
     private final PluginProvider plugin;
     private final String configFileName;
-    private File configFile;
+    private final File configFile;
     protected YamlConfiguration config;
 
     public BasicConfigHandler(PluginProvider plugin, String configFileName) {
@@ -18,7 +18,7 @@ public class BasicConfigHandler {
         this.config = null;
     }
 
-    public boolean reloadConfig() {
+    public final boolean reloadConfig() {
         if (!configFile.exists()) {
             try{
                 plugin.getDataFolder().mkdirs();
@@ -32,7 +32,7 @@ public class BasicConfigHandler {
         return true;
     }
 
-    public boolean saveConfig() {
+    public final boolean saveConfig() {
         try {
             if (config != null) {
                 config.save(configFile);
