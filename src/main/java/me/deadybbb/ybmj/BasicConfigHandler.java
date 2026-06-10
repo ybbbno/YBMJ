@@ -6,9 +6,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class BasicConfigHandler {
-    private final PluginProvider plugin;
     private final String configFileName;
     private final File configFile;
+    protected final PluginProvider plugin;
     protected YamlConfiguration config;
 
     public BasicConfigHandler(PluginProvider plugin, String configFileName) {
